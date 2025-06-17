@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageCircle } from 'lucide-react';
 // import { FaWhatsapp } from 'react-icons/fa';
+
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { FaInstagram, FaFacebookF, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,18 +13,99 @@ const Contact = () => {
     message: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value
+  //   });
+  // };
+
+
+
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  try {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbx4-A_eXU5AI1pdpHDns51S0ZLY9pihrjcAaBbdVmBFKvOTGRtCZQ63j57XnmDwHoCC/exec", {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
     });
+
+    toast.success("🎉 Message sent successfully!", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      pauseOnHover: true,
+      theme: "colored",
+    });
+
+    setFormData({ name: '', email: '', subject: '', message: '' });
+  } catch (error) {
+    toast.error("Something went wrong!", {
+      position: "top-center",
+    });
+    console.error("Submission Error:", error);
+  }
+};
+
+
+
+
+
+
+
+
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-  };
+
+
+  //   const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await fetch("https://script.google.com/macros/s/AKfycbx4-A_eXU5AI1pdpHDns51S0ZLY9pihrjcAaBbdVmBFKvOTGRtCZQ63j57XnmDwHoCC/exec", {
+  //       method: "POST",
+  //       mode: "no-cors", // Prevents CORS issues (no response body)
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(formData),
+  //     });
+
+  //     alert("Message sent!");
+  //     setFormData({ name: '', email: '', subject: '', message: '' });
+  //   } catch (error) {
+  //     console.error("Submission Error:", error);
+  //   }
+  // };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // Handle form submission here
+  //   console.log('Form submitted:', formData);
+  // };
 
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" id="contact">
@@ -240,6 +324,7 @@ const Contact = () => {
                 Send Message
               </button>
             </form>
+             <ToastContainer />
           </div>
         </div>
       </div>
@@ -248,3 +333,139 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useState } from 'react';
+// import { Send } from 'lucide-react';
+
+// const Contact = () => {
+//   const [formData, setFormData] = useState({
+//     name: '',
+//     email: '',
+//     subject: '',
+//     message: '',
+//   });
+
+//   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+//     const { name, value } = e.target;
+//     setFormData(prev => ({ ...prev, [name]: value }));
+//   };
+
+//   const handleSubmit = async (e: React.FormEvent) => {
+//     e.preventDefault();
+//     try {
+//       const response = await fetch("https://script.google.com/macros/s/AKfycbx4-A_eXU5AI1pdpHDns51S0ZLY9pihrjcAaBbdVmBFKvOTGRtCZQ63j57XnmDwHoCC/exec", {
+//         method: "POST",
+//         mode: "no-cors", // Prevents CORS issues (no response body)
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(formData),
+//       });
+
+//       alert("Message sent!");
+//       setFormData({ name: '', email: '', subject: '', message: '' });
+//     } catch (error) {
+//       console.error("Submission Error:", error);
+//     }
+//   };
+
+//   return (
+//     <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8">
+//       <form onSubmit={handleSubmit} className="space-y-6">
+//         <div className="grid md:grid-cols-2 gap-6">
+//           <div>
+//             <label htmlFor="name" className="block text-white font-medium mb-2">Name</label>
+//             <input
+//               type="text"
+//               id="name"
+//               name="name"
+//               value={formData.name}
+//               onChange={handleChange}
+//               className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-purple-400 transition-colors"
+//               placeholder="Your Name"
+//               required
+//             />
+//           </div>
+//           <div>
+//             <label htmlFor="email" className="block text-white font-medium mb-2">Email</label>
+//             <input
+//               type="email"
+//               id="email"
+//               name="email"
+//               value={formData.email}
+//               onChange={handleChange}
+//               className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-purple-400 transition-colors"
+//               placeholder="your@email.com"
+//               required
+//             />
+//           </div>
+//         </div>
+
+//         <div>
+//           <label htmlFor="subject" className="block text-white font-medium mb-2">Subject</label>
+//           <input
+//             type="text"
+//             id="subject"
+//             name="subject"
+//             value={formData.subject}
+//             onChange={handleChange}
+//             className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-purple-400 transition-colors"
+//             placeholder="Project Subject"
+//             required
+//           />
+//         </div>
+
+//         <div>
+//           <label htmlFor="message" className="block text-white font-medium mb-2">Message</label>
+//           <textarea
+//             id="message"
+//             name="message"
+//             value={formData.message}
+//             onChange={handleChange}
+//             rows={5}
+//             className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-purple-400 transition-colors resize-none"
+//             placeholder="Tell me about your project..."
+//             required
+//           ></textarea>
+//         </div>
+
+//         <button
+//           type="submit"
+//           className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center"
+//         >
+//           <Send size={20} className="mr-2" />
+//       Send Message
+//         </button>
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default Contact;
