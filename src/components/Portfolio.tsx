@@ -6,7 +6,7 @@ const Portfolio = () => {
      {
       title: 'JOB PORTAL SITE',
      description: 'MERN Stack and WordPress web application with 7⁺ pages, user authentication, and a job filter search feature that allows users to search jobs by category, location, and profile type.',
-     image: 'https://hii247.in/wp-content/uploads/2025/05/cropped-logo-design.png',
+     image: 'https://raw.githubusercontent.com/ajaykumardhurwe/Assets/refs/heads/main/fproject1.png',
      
     //  image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600',
       tags: ['React', 'Firebase', 'Wordpress', 'MongoDB', 'Node Js', 'express Js'],
