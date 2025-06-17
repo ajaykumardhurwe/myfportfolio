@@ -4,25 +4,25 @@ import { Star, Quote } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'Startup Founder',
-      company: 'TechVenture',
+      name: 'Omprakash',
+      role: 'Founder',
+      company: 'thegovscheme.in',
       avatar: '👩‍💼',
       rating: 5,
       testimonial: 'Ajay delivered a fully functional e-commerce platform ahead of schedule. His attention to detail and communication throughout the project was exceptional. The website performs beautifully and our sales have increased by 40%!'
     },
     {
-      name: 'Michael Chen',
-      role: 'Product Manager',
-      company: 'Digital Solutions',
+      name: 'Rishi',
+      role: 'Content Manager',
+      company: 'hii247.in',
       avatar: '👨‍💻',
       rating: 5,
       testimonial: 'Working with Ajay was a game-changer for our mobile app project. He transformed our complex requirements into an intuitive, user-friendly app. His expertise in React Native is outstanding. Highly recommend!'
     },
     {
-      name: 'Emily Rodriguez',
+      name: 'Yogesh',
       role: 'Marketing Director',
-      company: 'Creative Agency',
+      company: 'Movies.36garh.de',
       avatar: '👩‍🎨',
       rating: 5,
       testimonial: 'Our company website needed a complete overhaul, and Ajay exceeded all expectations. The new site is fast, responsive, and looks amazing on all devices. Client inquiries have doubled since launch!'

@@ -1,5 +1,6 @@
 import React,{useEffect, useState} from 'react';
 import { Github, Linkedin, Mail, ArrowDown, Code, Smartphone, MessageCircle } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 
 // const AutoChatPopup = () => {
@@ -57,11 +58,12 @@ const Hero = () => {
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-white shadow-xl rounded-xl p-4 max-w-xs z-50 animate-bounce-in hover:shadow-2xl transition-all duration-300 flex items-start gap-3"
       >
-        <MessageCircle className="text-green-600 mt-1" />
-        <div className="text-sm text-gray-800 font-medium">
+        <FaWhatsapp className="text-green-600 mt-1"></FaWhatsapp>
+        {/* <MessageCircle className="text-green-600 mt-1" /> */}
+        {/* <div className="text-sm text-gray-800 font-medium">
           👋 Portfolio looks great! <br />
           <strong>Hire Me Now</strong>
-        </div>
+        </div> */}
       </a>
     
 
