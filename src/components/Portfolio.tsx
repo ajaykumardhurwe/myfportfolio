@@ -14,6 +14,20 @@ const Portfolio = () => {
       demoUrl: 'https://hii247.in/',
       githubUrl: 'https://github.com/ajaykumardhurwe/jobs.hii247.in'
     },
+
+       {
+      title: 'BUSINESS WEBSITE',
+     description: 'Developed a responsive business website with user authentication, real-time chat, and Firebase integration. Included essential pages like Home, Services, About, and Contact with SEO optimization.',
+     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_dURqow-vfHO6Gd25kEk8aC5ZSF7n7NZOrg&s',
+     
+    //  image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600',
+      tags: ['React', 'Firebase', 'Vite', 'tailwind', 
+        // 'Node Js', 'express Js'
+      ],
+      type: 'web',
+      demoUrl: 'https://mybusiness.hii247.in/',
+      githubUrl: 'https://github.com/ajaykumardhurwe/jobs.hii247.in'
+    },
       {
       title: 'MOVIES WEBSITE',
      description: 'Developed a dynamic movie website with real-time filtering by categories like Hollywood, Bollywood, South, Hindi Dubbed, and English. Implemented a powerful search feature that allows users to find movies by name instantly. Clean UI and responsive design ensure smooth browsing across devices.',
