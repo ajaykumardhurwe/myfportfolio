@@ -81,9 +81,9 @@ const Hero = () => {
 
 
 
-              <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-full font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
+              {/* <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-full font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
                 View My Work
-              </button>
+              </button> */}
             </div>
 
             {/* Social Links */}

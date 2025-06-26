@@ -4,16 +4,41 @@ import { ExternalLink, Github, Globe, Smartphone } from 'lucide-react';
 const Portfolio = () => {
   const projects = [
      {
-      title: 'JOB PORTAL WEBSITE',
+      title: 'hii24.in',
      description: 'MERN Stack and WordPress web application with 7⁺ pages, user authentication, and a job filter search feature that allows users to search jobs by category, location, and profile type.',
      image: 'https://raw.githubusercontent.com/ajaykumardhurwe/Assets/refs/heads/main/fproject1.png',
      
     //  image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600',
-      tags: ['React', 'Firebase', 'Wordpress', 'MongoDB', 'Node Js', 'express Js'],
+      tags: ['React', 
+        // 'Firebase', 
+        'Wordpress', 
+        // 'MongoDB', 
+        'Google Sheet',
+        'Node Js', 'express Js'],
       type: 'web',
       demoUrl: 'https://hii247.in/',
       githubUrl: 'https://github.com/ajaykumardhurwe/jobs.hii247.in'
     },
+  
+     {
+      title: 'JOB PORTAL WEBSITE',
+     description: 'A responsive job portal web application that connects job seekers with recruiters. Features include job listing and filtering, job posting support, user authentication, real-time data integration using Google Sheets, and a clean UI with light and dark mode options. Built using React.js, Tailwind CSS, google sheet and Firebase.',
+     image: 'https://raw.githubusercontent.com/ajaykumardhurwe/Assets/refs/heads/main/cg%20job%202.png',
+     
+    //  image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600',
+      tags: ['React', 
+        // 'Firebase', 
+        // 'Wordpress', 
+        // 'MongoDB', 
+        'Google Sheet',
+        // 'Node Js', 'express Js'
+        'firebaase', 'hostinger'
+      ],
+      type: 'web',
+      demoUrl: 'https://job.36garh.de/',
+      githubUrl: 'https://github.com/ajaykumardhurwe/jobs.hii247.in'
+    },
+
 
        {
       title: 'BUSINESS WEBSITE',
@@ -99,7 +124,7 @@ const Portfolio = () => {
     <section className="py-20 bg-gray-50" id="portfolio">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">My Portfolio</h2>
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">My Porjects</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             A showcase of recent projects demonstrating expertise in web and mobile development
           </p>

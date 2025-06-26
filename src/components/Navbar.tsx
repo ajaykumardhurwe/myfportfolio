@@ -502,7 +502,7 @@ const Navbar = () => {
           <div className="flex flex-col h-full">
             {/* Drawer Header */}
             <div className="flex items-center justify-between p-6 bg-gradient-to-r from-purple-600 to-blue-600">
-              <h2 className="text-xl font-bold text-white">Navigation</h2>
+              <h2 className="text-xl font-bold text-white">Ajay, This side..</h2>
               <button
                 onClick={toggleDrawer}
                 className="p-2 rounded-lg bg-white/20 text-white hover:bg-white/30 transition-colors"
@@ -514,10 +514,10 @@ const Navbar = () => {
             <div className="flex-1 overflow-y-auto">
               {/* Navigation Links */}
               <div className="p-6 border-b border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                {/* <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
                   <Home size={20} className="mr-2" />
                   Navigation
-                </h3>
+                </h3> */}
                 <div className="space-y-2">
                   {navItems.map((item) => (
                     <a
